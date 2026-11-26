@@ -8,7 +8,6 @@ export default function ProductRow({ product, onEdit, onDelete, categories = [] 
   const isOutOfStock = product.stock === 0;
   const isActive = product.status === 'active';
 
-  // Lấy tên hiển thị danh mục từ props categories hoặc fallback về categoryNames
   const categoryDisplayName =
     categories.find?.((c) => c.id === product.category)?.name ||
     categoryNames[product.category] ||

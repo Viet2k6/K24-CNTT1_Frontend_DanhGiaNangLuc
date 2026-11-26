@@ -61,6 +61,45 @@ body {
   color: #111827;
 }
 
+/* Filters & Search Toolbar */
+.filters-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-item.search-item {
+  flex: 2;
+  min-width: 260px;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 8px 0;
+}
+
+.page-current {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.btn-pagination {
+  padding: 6px 16px;
+  min-width: 80px;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
