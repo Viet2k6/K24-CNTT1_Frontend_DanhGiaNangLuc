@@ -5,7 +5,7 @@
 - **Lớp:** CNTT1
 - **Link repository:** https://github.com/Viet2k6/K24-CNTT1_Frontend_DanhGiaNangLuc
 - **Hệ điều hành (Windows/macOS):** Windows
-- **Mã commit P2 đã nộp trước phút 90 (gõ `git log --oneline -1`):**
+- **Mã commit P2 đã nộp trước phút 90 (gõ `git log --oneline -1`):** 9cea8b2
 - **Phiên bản Node.js (gõ `node -v`):** v22.18.0
 
 ## 4.1. Giao diện danh sách sản phẩm
@@ -25,11 +25,11 @@
 
 > Chấm trực tiếp trên mã nguồn thư mục officemart_admin.
 
-- [ ] 4.2.1. Tải danh sách
-- [ ] 4.2.2. Form thêm sản phẩm
-- [ ] 4.2.3. Gửi form
-- [ ] 4.2.4. Sửa sản phẩm
-- [ ] 4.2.5. Xoá sản phẩm
+- [x] 4.2.1. Tải danh sách
+- [x] 4.2.2. Form thêm sản phẩm
+- [x] 4.2.3. Gửi form
+- [x] 4.2.4. Sửa sản phẩm
+- [x] 4.2.5. Xoá sản phẩm
 
 ## 4.3. Tìm kiếm, lọc và phân trang
 

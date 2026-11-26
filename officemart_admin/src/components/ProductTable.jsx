@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductRow from './ProductRow.jsx';
 
-export default function ProductTable({ products = [], onEdit, onDelete }) {
+export default function ProductTable({ products = [], onEdit, onDelete, categories = [] }) {
   return (
     <div className="table-responsive">
       <table className="product-table" data-testid="product-table">
@@ -23,6 +23,7 @@ export default function ProductTable({ products = [], onEdit, onDelete }) {
               product={product}
               onEdit={onEdit}
               onDelete={onDelete}
+              categories={categories}
             />
           ))}
         </tbody>

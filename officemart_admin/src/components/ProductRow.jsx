@@ -1,12 +1,18 @@
 import React from 'react';
 import { categoryNames } from '../data/sample.js';
 
-export default function ProductRow({ product, onEdit, onDelete }) {
+export default function ProductRow({ product, onEdit, onDelete, categories = [] }) {
   if (!product) return null;
 
   const formattedPrice = new Intl.NumberFormat('vi-VN').format(product.price) + ' ₫';
   const isOutOfStock = product.stock === 0;
   const isActive = product.status === 'active';
+
+  // Lấy tên hiển thị danh mục từ props categories hoặc fallback về categoryNames
+  const categoryDisplayName =
+    categories.find?.((c) => c.id === product.category)?.name ||
+    categoryNames[product.category] ||
+    product.category;
 
   return (
     <tr className="product-row" data-testid="product-row">
@@ -20,7 +26,7 @@ export default function ProductRow({ product, onEdit, onDelete }) {
       </td>
       <td className="col-category">
         <span className="mobile-label">Danh mục</span>
-        <span className="cell-value">{categoryNames[product.category] || product.category}</span>
+        <span className="cell-value">{categoryDisplayName}</span>
       </td>
       <td className="col-price">
         <span className="mobile-label">Giá</span>

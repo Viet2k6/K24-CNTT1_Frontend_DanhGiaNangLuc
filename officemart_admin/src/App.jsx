@@ -1,29 +1,8 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import ProductTable from './components/ProductTable.jsx';
-import sampleProducts from './data/sample.js';
+import ProductListPage from './pages/ProductListPage.jsx';
+import ProductFormPage from './pages/ProductFormPage.jsx';
 import './App.css';
-
-function ProductListPage() {
-  const displayProducts = [...sampleProducts].reverse();
-
-  return (
-    <div className="page-container">
-      <div className="page-header">
-        <h1>Sản phẩm</h1>
-        <button
-          type="button"
-          className="btn btn-primary"
-          data-testid="add-button"
-        >
-          Thêm sản phẩm
-        </button>
-      </div>
-
-      <ProductTable products={displayProducts} />
-    </div>
-  );
-}
 
 export default function App() {
   return (
@@ -38,6 +17,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/products" replace />} />
           <Route path="/products" element={<ProductListPage />} />
+          <Route path="/products/new" element={<ProductFormPage mode="create" />} />
+          <Route path="/products/:id/edit" element={<ProductFormPage mode="edit" />} />
           <Route path="*" element={<Navigate to="/products" replace />} />
         </Routes>
       </main>
